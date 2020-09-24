@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleApi.Infrastructure.Cqs\SimpleApi.Infrastructure.Cqs.csproj" />
+    <ProjectReference Include="..\SimpleApi.Infrastructure.Repository\SimpleApi.Infrastructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
