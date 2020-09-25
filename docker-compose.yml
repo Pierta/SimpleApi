@@ -20,10 +20,14 @@ services:
       CONNECTION_STRING: Host=postgres;Port=5432;Database=simple-db;Username=simple-user;Password=simple-password!
     depends_on:
       - postgres
+    ports:
+      - "80:80"
   prometheus:
     build: ./Prometheus
     container_name: prometheus
     depends_on:
       - simpleapi
+    ports:
+      - "9090:9090"
 volumes:
   postgres:

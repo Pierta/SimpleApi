@@ -7,7 +7,7 @@ Simple rest api boilerplate
 **Prerequisites:**
 - docker desktop
 
-**Windows 10 run instructions:**
+**Debug run instructions:**
 ```
 cd LocalPostgresScripts
 ./SetupLocalPostgres12InDocker.sh
@@ -20,12 +20,15 @@ dotnet run -p SimpleApi/
 ./RemoveLocalPostgres12.sh
 ```
 
-**Linux run instructions:**
+**Release run instructions:**
 ```
-docker-compose up
+docker-compose up -d
 # REST API WILL BE AWAILABLE ON http://localhost
 
 # After testing
-# ctrl + C
 docker-compose down
+docker image prune -f
+docker image rmi simpleapi_prometheus
+docker image rmi simpleapi_simpleapi
+docker volume rm simpleapi_postgres
 ```
